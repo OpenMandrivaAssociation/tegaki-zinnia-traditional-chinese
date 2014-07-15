@@ -1,14 +1,13 @@
 Summary: Traditional Chinese Models for tegaki zinnia engine
-Name: tegaki-zinnia-traditional-chinese
+Name:    tegaki-zinnia-traditional-chinese
 Version: 0.3
-Release: %mkrel 1
+Release: 2
 License: GPLv2+
-Group: System/Internationalization
+Group:   System/Internationalization
 Source0: http://www.tegaki.org/releases/0.3/models/%{name}-%{version}.zip
-URL: http://www.tegaki.org
-Buildroot: %{_tmppath}/%{name}-%{version}-buildroot
+Url:     http://www.tegaki.org
 BuildArch: noarch
-Requires: locales-zh_TW
+Requires: locales-zh
 Requires: tegaki
 Requires: zinnia
 Provides: tegaki-models
@@ -20,23 +19,15 @@ both the desktop and mobile devices, and that is designed from the ground up to
 work well with Chinese and Japanese.
 
 %prep
-%setup -qn %name-%version
+%setup -qn %{name}-%{version}
 
 %install
-rm -rf %{buildroot}
 mkdir -p %{buildroot}%{_datadir}/tegaki/models/zinnia/
 install -m0644 *.meta *.model %{buildroot}%{_datadir}/tegaki/models/zinnia/
 
 %clean
-rm -rf %{buildroot}
 
 %files
-%defattr (-,root,root)
 %{_datadir}/tegaki/models/zinnia/*
 
-
-%changelog
-* Tue Nov 02 2010 Funda Wang <fwang@mandriva.org> 0.3-1mdv2011.0
-+ Revision: 592329
-- import tegaki-zinnia-traditional-chinese
 
