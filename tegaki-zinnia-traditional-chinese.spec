@@ -5,7 +5,7 @@ Release: 3
 License: GPLv2+
 Group:   System/Internationalization
 Source0: http://www.tegaki.org/releases/0.3/models/%{name}-%{version}.zip
-Url:     http://www.tegaki.org
+Url:     https://www.tegaki.org
 BuildArch: noarch
 Requires: locales-zh
 Requires: tegaki
